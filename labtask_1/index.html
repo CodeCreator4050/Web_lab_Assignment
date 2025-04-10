@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub - Your Style Destination</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fashion<span>Hub</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="#" class="btn btn-outline-dark me-2">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-dark me-2">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-dark position-relative">
+                        <i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Banner -->
+    <div class="alert alert-dismissible fade show discount-alert mb-0 text-center" role="alert">
+        🎉 Spring Sale! Get 25% OFF with code: SPRING25 🎉
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Hero Section with Bootstrap Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1 class="mb-4">Spring Collection 2025</h1>
+                        <p class="mb-4">Discover the latest trends and styles that will define your wardrobe this season. Exclusive designs crafted for your unique style.</p>
+                        <button class="btn btn-primary btn-lg me-2">Shop Now</button>
+                        <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600') no-repeat center center / cover;">
+                    <div class="hero-content">
+                        <h1 class="mb-4">Exclusive Designer Pieces</h1>
+                        <p class="mb-4">Limited edition collections featuring unique designs for those who appreciate fine craftsmanship and exceptional style.</p>
+                        <button class="btn btn-secondary btn-lg me-2">Explore Collection</button>
+                        <button class="btn btn-outline-light btn-lg">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600') no-repeat center center / cover;">
+                    <div class="hero-content">
+                        <h1 class="mb-4">Sustainable Fashion</h1>
+                        <p class="mb-4">Eco-friendly clothing made from recycled materials. Look good while making a positive impact on the environment.</p>
+                        <button class="btn btn-primary btn-lg me-2">Shop Eco-Collection</button>
+                        <button class="btn btn-outline-light btn-lg">Our Story</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Spring Collection Showcase</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <img src="/api/placeholder/1200/675" alt="Video placeholder" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h4>Free Shipping</h4>
+                    <p>On all orders over $50</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <h4>30-Day Returns</h4>
+                    <p>Hassle-free return policy</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure checkout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Shop by Category</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="featured-item position-relative overflow-hidden rounded">
+                        <img src="/api/placeholder/400/250" alt="Men's Collection" class="img-fluid w-100">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.5);">
+                                <h3 class="mb-2">Men's Collection</h3>
+                                <a href="#" class="btn btn-outline-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-item position-relative overflow-hidden rounded">
+                        <img src="/api/placeholder/400/250" alt="Women's Collection" class="img-fluid w-100">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.5);">
+                                <h3 class="mb-2">Women's Collection</h3>
+                                <a href="#" class="btn btn-outline-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-item position-relative overflow-hidden rounded">
+                        <img src="/api/placeholder/400/250" alt="Accessories" class="img-fluid w-100">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.5);">
+                                <h3 class="mb-2">Accessories</h3>
+                                <a href="#" class="btn btn-outline-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">New Arrivals</h2>
+                <div>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 1">
+                                        <span class="badge bg-primary category-badge">New</span>
+                                        <div class="sale-tag">-15%</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Classic White Shirt</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="text-decoration-line-through text-muted me-2">$59.99</span>
+                                                <span class="fw-bold">$49.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 2">
+                                        <span class="badge bg-primary category-badge">New</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Slim Fit Jeans</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="fw-bold">$69.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 3">
+                                        <span class="badge bg-secondary category-badge">Trending</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Floral Summer Dress</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="fw-bold">$79.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 4">
+                                        <span class="badge bg-danger category-badge">Hot</span>
+                                        <div class="sale-tag">-20%</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Leather Jacket</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="text-decoration-line-through text-muted me-2">$199.99</span>
+                                                <span class="fw-bold">$159.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 5">
+                                        <span class="badge bg-success category-badge">Eco</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Casual Sneakers</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="fw-bold">$89.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 6">
+                                        <span class="badge bg-primary category-badge">New</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Stylish Sunglasses</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="fw-bold">$39.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 7">
+                                        <span class="badge bg-secondary category-badge">Trending</span>
+                                        <div class="sale-tag">-10%</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cotton T-Shirt</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="text-decoration-line-through text-muted me-2">$29.99</span>
+                                                <span class="fw-bold">$26.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card product-card">
+                                    <div class="position-relative">
+                                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Product 8">
+                                        <span class="badge bg-info category-badge">Limited</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Watch Collection</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="fw-bold">$129.99</span>
+                                            </div>
+                                            <div class="text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items with Tabs -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Featured Collections</h2>
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="itemsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="bestsellers-tab" data-bs-toggle="pill" data-bs-target="#bestsellers" type="button" role="tab">Bestsellers</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="featured-tab" data-bs-toggle="pill" data-bs-target="#featured" type="button" role="tab">Featured</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sale-tab" data-bs-toggle="pill" data-bs-target="#sale" type="button" role="tab">On Sale</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="itemsTabContent">
+                <div class="tab-pane fade show active" id="bestsellers" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="card product-card">
+                                <img src="/api/placeholder/300/300" class="card-img-top" alt="Bestseller 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Premium Denim Jeans</h5>
+                                    <p class="card-text text-muted">High-quality denim for ultimate comfort
